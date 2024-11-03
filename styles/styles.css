@@ -1154,8 +1154,9 @@ section {
     margin:auto
 }
 @media screen and (max-width: 600px) {
-  .tree ul li a span {
-    display: none; /* Hide the text under each photo on mobile devices */
+  .tree ul li {
+    width: 50%;
+    height: 50%; 
 }
 }
 .tree a span{
