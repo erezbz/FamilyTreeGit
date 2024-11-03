@@ -1153,9 +1153,9 @@ section {
     border-radius: 100px;
     margin:auto
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .tree ul li a span {
-       text-size-adjust: 0rem;
+       text-size-adjust: 0.01rem;
   }
 }
 .tree a span{
