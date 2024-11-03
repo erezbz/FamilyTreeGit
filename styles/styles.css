@@ -1155,7 +1155,7 @@ section {
 }
 @media (max-width: 768px) {
   .tree ul li a span {
-      display: none; /* Hide the text under each photo on mobile devices */
+       text-size-adjust: 0rem;
   }
 }
 .tree a span{

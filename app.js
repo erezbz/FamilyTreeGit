@@ -13,7 +13,7 @@
         if (isMobileDevice()) {
             document.body.style.zoom = isPortfolio ? "2%" : "100%";
         } else {
-            document.body.style.zoom = isPortfolio ? "80%" : "100%";
+            document.body.style.zoom = isPortfolio ? "80%" : "80%";
         }
     }
 
