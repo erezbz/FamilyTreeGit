@@ -11,9 +11,9 @@
     // Initial zoom adjustment if viewing on mobile and portfolio section is active
     function adjustZoom(isPortfolio) {
         if (isMobileDevice()) {
-            document.body.style.zoom = isPortfolio ? "2%" : "100%";
+            document.body.style.zoom = isPortfolio ? "1%" : "100%";
         } else {
-            document.body.style.zoom = isPortfolio ? "80%" : "80%";
+            document.body.style.zoom = isPortfolio ? "60%" : "100%";
         }
     }
 
