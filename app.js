@@ -2,7 +2,21 @@
     const controls = document.querySelectorAll(".control");
     const portfolioButton = document.querySelector('[data-id="portfolio"]');
     const themeButton = document.querySelector(".theme-btn");
-    
+
+    // Function to detect if the user is on a mobile device
+    function isMobileDevice() {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    // Initial zoom adjustment if viewing on mobile and portfolio section is active
+    function adjustZoom(isPortfolio) {
+        if (isMobileDevice()) {
+            document.body.style.zoom = isPortfolio ? "60%" : "100%";
+        } else {
+            document.body.style.zoom = isPortfolio ? "80%" : "100%";
+        }
+    }
+
     controls.forEach(button => {
         button.addEventListener("click", function() {
             // Remove active class from previously active button
@@ -14,13 +28,8 @@
             // Add active class to the section corresponding to the clicked button
             document.getElementById(button.dataset.id).classList.add("active");
 
-            // If the clicked button is the portfolio button, change zoom to 50%
-            if (button.dataset.id === "portfolio") {
-                document.body.style.zoom = "60%";
-            } else {
-                // Otherwise, change zoom back to 100%
-                document.body.style.zoom = "100%";
-            }
+            // Adjust zoom based on the section
+            adjustZoom(button.dataset.id === "portfolio");
         });
     });
     
