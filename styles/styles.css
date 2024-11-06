@@ -1170,7 +1170,7 @@ section {
     font-size: 4rem;
   }
   .tree a span{
-    font-size: 0.2rem;
+    font-size: 0.1rem;
   }
   .tree a img{
     display: none;
@@ -1181,6 +1181,7 @@ section {
   }
   .tree li{
     padding:0px;
+    margin: 0;
   }
   #two{
     display: flex;
@@ -1191,8 +1192,8 @@ section {
   }
   #two img{
     display: flex;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
   }
     
 }
