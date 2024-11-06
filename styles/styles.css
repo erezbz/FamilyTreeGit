@@ -1191,8 +1191,9 @@ section {
   }
   #two img{
     display: flex;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
+    margin-bottom: 0;
   }
     
 }
