@@ -760,6 +760,149 @@ section {
   padding-left: 0;
 }
 
+
+.family-tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+.generation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.person {
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+  max-width: 150px;
+  border-radius: 50%; /* Makes the person's container a circle */
+  overflow: hidden; /* Ensures the image stays within the circle */
+}
+.person img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%; /* Makes the image a circle */
+}
+.tree
+{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.tree ul
+{
+    padding-top: 20px;
+    position: relative;
+    transition: .5s;
+}
+
+.tree li
+{
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: .5s;
+}
+.tree li a{
+  border-radius: -40px;
+}
+
+.tree li:before, .tree li:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border: 4px solid var(--color-secondary);
+    width: 51%;
+    height: 0px;
+}
+
+.tree li:after
+{
+    right: auto;
+    left: 50%;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.tree li:only-child:after, .tree li:only-child:before
+{
+    display: none;
+}
+
+.tree li:only-child
+{
+    padding-top: 0;
+}
+
+.tree li:first-child:before, .tree li:last-child:after
+{
+    border: 0 none ;
+}
+
+.tree li:last-child:before
+{
+    border-right: 4px solid var(--color-secondary);
+    border-radius: 0px 5px 0px 0px;
+}
+.tree li:first-child:after
+{
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tree ul ul:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left:4px solid var(--color-secondary);
+    width: 0px;
+    height: 20px;
+}
+
+.tree a
+{
+    border: 4px solid var(--color-secondary);
+    padding: 10px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.tree a img
+{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px !important;
+    border-radius: 100px;
+    margin:auto
+}
+
+.tree a span{
+    border: 4px solid var(--color-secondary);
+}
+
+
+.hebrew-text {
+  direction: rtl;
+  unicode-bidi: embed; /* Ensures proper rendering of mixed-direction text */
+}
+.sound{
+  margin-bottom: 10px;
+}
+#two{
+  display: none;
+}
 @media screen and (max-width: 600px) {
   header {
     padding: 0 !important;
@@ -964,6 +1107,7 @@ section {
   .main-title h2 .bg-text {
     font-size: 4.5rem;
   }
+  
 }
 @media screen and (max-width: 970px) {
   .container {
@@ -1025,144 +1169,30 @@ section {
   .main-title h2 .bg-text {
     font-size: 4rem;
   }
-}
-
-.family-tree {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-}
-.generation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.person {
-  border: 2px solid #333;
-  padding: 10px;
-  text-align: center;
-  max-width: 150px;
-  border-radius: 50%; /* Makes the person's container a circle */
-  overflow: hidden; /* Ensures the image stays within the circle */
-}
-.person img {
-  max-width: 100px;
-  max-height: 100px;
-  border-radius: 50%; /* Makes the image a circle */
-}
-.tree
-{
-    width: 100%;
-    height: auto;
-    text-align: center;
-}
-
-.tree ul
-{
-    padding-top: 20px;
-    position: relative;
-    transition: .5s;
-}
-
-.tree li
-{
-    display: inline-table;
-    text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 10px;
-    transition: .5s;
-}
-.tree li a{
-  border-radius: -40px;
-}
-
-.tree li:before, .tree li:after
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 50%;
-    border: 4px solid var(--color-secondary);
-    width: 51%;
-    height: 0px;
-}
-
-.tree li:after
-{
-    right: auto;
-    left: 50%;
-    border-left: 4px solid var(--color-secondary);
-}
-
-.tree li:only-child:after, .tree li:only-child:before
-{
+  .tree a span{
+    font-size: 0.6rem;
+  }
+  .tree a img{
     display: none;
-}
-
-.tree li:only-child
-{
-    padding-top: 0;
-}
-
-.tree li:first-child:before, .tree li:last-child:after
-{
-    border: 0 none ;
-}
-
-.tree li:last-child:before
-{
-    border-right: 4px solid var(--color-secondary);
-    border-radius: 0px 5px 0px 0px;
-}
-.tree li:first-child:after
-{
-    border-radius: 5px 0px 0px 0px;
-}
-
-.tree ul ul:before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-left:4px solid var(--color-secondary);
-    width: 0px;
-    height: 20px;
-}
-
-.tree a
-{
-    border: 4px solid var(--color-secondary);
-    padding: 10px;
-    display: inline-grid;
-    border-radius: 5px;
-    text-decoration-line: none;
-    border-radius: 5px;
-    transition: .5s;
-}
-
-.tree a img
-{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px !important;
-    border-radius: 100px;
-    margin:auto
-}
-
-.tree a span{
-    border: 4px solid var(--color-secondary);
-}
-
-
-.hebrew-text {
-  direction: rtl;
-  unicode-bidi: embed; /* Ensures proper rendering of mixed-direction text */
-}
-.sound{
-  margin-bottom: 10px;
+  }
+  .tree a{
+    margin: 0;
+    padding: 0px;
+  }
+  .tree li{
+    padding:0px;
+  }
+  #two{
+    display: flex;
+    
+  }
+  #two a span{
+    display: none;
+  }
+  #two img{
+    display: flex;
+    height: 40px;
+    width: 40px;
+  }
+    
 }
