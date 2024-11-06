@@ -1173,7 +1173,7 @@ section {
     align-items: center;
   }
   .tree a span{
-    font-size: 0.48rem;
+    font-size: 0.6rem;
   }
   .tree a img{
     display: none;
@@ -1204,8 +1204,8 @@ section {
     display: flex;
     align-items: center;
     align-self: center;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     margin: 0 !important;
   }
     
