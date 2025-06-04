@@ -897,6 +897,7 @@ section {
   direction: rtl;
   unicode-bidi: embed; /* Ensures proper rendering of mixed-direction text */
 }
+
 .sound{
   margin-bottom: 10px;
 }
@@ -1213,3 +1214,5 @@ section {
   }
     
 }
+
+
